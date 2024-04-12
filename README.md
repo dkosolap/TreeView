@@ -43,9 +43,9 @@ export enum PermissionFlags {
 }
 
 export interface FileSystem {
-	root: Folder;
-	currentNode: Folder;
-	activeFile: null | File;
+    root: Folder;
+    currentNode: Folder;
+    activeFile: null | File;
 }
 
 export type FileNode = Folder | File;
@@ -67,32 +67,32 @@ export enum FileType {
 export type FileTypeKey = keyof typeof FileType;
 
 export interface FolderResponse {
-	name: string;
-	id: number;
-	parentId: number | null;
-	children: Array<FolderResponse | FileResponse>
-	permission: PermissionFlags;
-	createdAt: string;
-	modifiedAt: string;
-	nodeType: NodeTypeKey;
-	isEmpty: boolean;
+    name: string;
+    id: number;
+    parentId: number | null;
+    children: Array<FolderResponse | FileResponse>
+    permission: PermissionFlags;
+    createdAt: string;
+    modifiedAt: string;
+    nodeType: NodeTypeKey;
+    isEmpty: boolean;
 }
 
 export interface Folder extends FolderResponse {
-	children: FileNode[];
-	expanded: boolean;
+    children: FileNode[];
+    expanded: boolean;
 }
 
 export interface FileResponse {
-	name: string;
-	id: number;
-	parentId: number | null;
-	type: FileTypeKey;
-	url: string;
-	permission: PermissionFlags;
-	createdAt: string;
-	modifiedAt: string;
-	nodeType: NodeTypeKey;
+    name: string;
+    id: number;
+    parentId: number | null;
+    type: FileTypeKey;
+    url: string;
+    permission: PermissionFlags;
+    createdAt: string;
+    modifiedAt: string;
+    nodeType: NodeTypeKey;
 }
 
 export interface File extends FileResponse {}
@@ -103,12 +103,12 @@ export interface File extends FileResponse {}
     
     ```tsx
     interface Req {
-    	depth?: number;
+        depth?: number;
     }
     
     interface Res  {
-    	status: string;
-    	data: FolderResponse[];
+        status: string;
+        data: FolderResponse[];
     }
     ```
     
@@ -116,8 +116,8 @@ export interface File extends FileResponse {}
     
     ```tsx
     interface Res {
-    	status: string;
-    	data: FolderResponse;
+        status: string;
+        data: FolderResponse;
     }
     ```
     
@@ -125,8 +125,8 @@ export interface File extends FileResponse {}
     
     ```tsx
     interface Res {
-    	status: string;
-    	data: FileResponse;
+        status: string;
+        data: FileResponse;
     }
     ```
     
@@ -134,12 +134,12 @@ export interface File extends FileResponse {}
     
     ```tsx
     interface Req {
-    	newParentId: number;
+        newParentId: number;
     }
     
     interface Res {
-    	status: string;
-    	data: FolderResponse; //parent folder
+        status: string;
+        data: FolderResponse; //parent folder
     }
     ```
     
@@ -147,8 +147,8 @@ export interface File extends FileResponse {}
     
     ```tsx
     interface Res {
-    	status: string;
-    	data: FolderResponse; //parent folder
+        status: string;
+        data: FolderResponse; //parent folder
     }
     ```
     
@@ -156,8 +156,8 @@ export interface File extends FileResponse {}
     
     ```tsx
     interface Res {
-    	status: string;
-    	data: FolderResponse; //parent folder
+        status: string;
+        data: FolderResponse; //parent folder
     }
     ```
     
