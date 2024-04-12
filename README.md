@@ -10,27 +10,26 @@
 
 - Show items by hierarchy
     - It can be a folder
-        - expanded
-        - collapsed
-        - contain folders/files
-        - empty
-        - not permission
+        - ✅ expanded
+        - ✅ collapsed
+        - ✅ contain folders/files
+        - ✅ empty
+        - ✅not permission
     - It can be a file
-        - difference types: would be image, video, song, other
-        - active state file
-        - not permission
+        - ✅ difference types: would be image, video, song, other
+        - ✅ not permission
 - Interaction
-    - can expand/collapse folders
+    - ✅ can expand/collapse folders
     - can move folder/file
     - can delete folder/file
-    - can pick up a file
-- Search by folder/file name
+- ✅ Search by folder/file name
 
 ## No function req.
 
-- Performance: Fast loading/ instant user feedback / fast searching
+- ✅ Performance: Fast loading/ instant user feedback / fast searching
+- ✅ Accessibility: mouse/keyboard
+- Store expand/collapse in localStorange
 - Testing
-- Accessibility: mouse/keyboard
 - Error handling
 
 ## API & Interface
@@ -100,7 +99,7 @@ export interface File extends FileResponse {}
 
 ```
 
-- `GET: /tree`
+- ✅`GET: /tree`
     
     ```tsx
     interface Req {
@@ -113,7 +112,7 @@ export interface File extends FileResponse {}
     }
     ```
     
-- `GET: /folders/{folderId}`
+- ✅`GET: /folders/{folderId}`
     
     ```tsx
     interface Res {
